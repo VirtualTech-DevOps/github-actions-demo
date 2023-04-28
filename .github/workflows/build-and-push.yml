@@ -29,6 +29,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - id: sha
         run: echo "short=$(git rev-parse --short $GITHUB_SHA)" >> "$GITHUB_OUTPUT"
+      - id: repo
+        run: echo "lower=$(echo ${{ github.repository }} | tr '[A-Z]' '[a-z]')" >> "$GITHUB_OUTPUT"
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
@@ -36,5 +38,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ steps.sha.outputs.short }}
+            ghcr.io/${{ steps.repo.outputs.lower }}:latest
+            ghcr.io/${{ steps.repo.outputs.lower }}:${{ steps.sha.outputs.short }}
