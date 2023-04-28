@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'app/**'
+      - .github/workkflowws/build-and-push.yml
 
 jobs:
   docker:
