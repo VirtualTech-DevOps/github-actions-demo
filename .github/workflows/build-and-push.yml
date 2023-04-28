@@ -35,4 +35,6 @@ jobs:
           context: app
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: app:latest,app:${{ steps.sha.outputs.short }}
+          tags: |
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ steps.sha.outputs.short }}
