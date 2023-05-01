@@ -9,7 +9,7 @@ on:
       - .github/workflows/build-and-push.yml
 
 jobs:
-  docker:
+  build-and-push:
     runs-on: ubuntu-latest
     permissions:
       contents: read
