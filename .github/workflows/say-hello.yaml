@@ -15,6 +15,7 @@ jobs:
       - name: hello
         run: echo "hello"
   say-goodbye:
+    needs: say-hello
     runs-on: ubuntu-latest
     steps:
       - name: goodbye
