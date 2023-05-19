@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'app/**'
-      - .github/workflows/actions2.yaml
+      - .github/workflows/say-hello.yaml
 
 jobs:
   echo:
