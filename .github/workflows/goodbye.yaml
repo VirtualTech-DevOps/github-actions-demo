@@ -6,8 +6,8 @@ on:
   workflow_call
 
 jobs:
-  say-goodbye:
+  goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: hello
+      - name: say goodbye
         run: echo "goodbye"

@@ -10,11 +10,11 @@ on:
       - .github/workflows/hello.yaml
 
 jobs:
-  say-hello:
+  hello:
     runs-on: ubuntu-latest
     steps:
-      - name: hello
+      - name: say hello
         run: echo "hello"
-  say-goodbye:
-    needs: say-hello
+  goodbye:
+    needs: hello
     uses: ./.github/workflows/goodbye.yaml
