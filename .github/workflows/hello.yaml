@@ -1,12 +1,13 @@
 name: hello
 
+run-name: say hello
+
 on:
   push:
     branches:
       - main
     paths:
-      - 'app/**'
-      - .github/workflows/say-hello.yaml
+      - .github/workflows/hello.yaml
 
 jobs:
   say-hello:
@@ -16,7 +17,4 @@ jobs:
         run: echo "hello"
   say-goodbye:
     needs: say-hello
-    runs-on: ubuntu-latest
-    steps:
-      - name: goodbye
-        run: echo "goodbye"
+    uses: ./.github/workflows/goodbye.yaml

@@ -1,0 +1,13 @@
+name: goodbye
+
+run-name: say goodbye
+
+on:
+  workflow_call
+
+jobs:
+  say-goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello
+        run: echo "goodbye"
