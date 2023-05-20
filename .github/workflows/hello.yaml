@@ -16,5 +16,5 @@ jobs:
       - name: say hello
         run: echo "hello"
   goodbye:
-    needs: hello
+    #needs: hello
     uses: ./.github/workflows/goodbye.yaml
