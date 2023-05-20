@@ -44,6 +44,8 @@ jobs:
 
         # GITHUB_SHAに入っているハッシュ値を短くする
         # 短いハッシュ値をコンテナのタグに使いたい
+        # `$GITHUB_OUTPUT`に`key=value`のフォーマットでリダイレクトすることで他のステップからkeyで参照できる
+        # `${{ steps.ID.outputs.KEY }}`
       - id: sha
         run: echo "short=$(git rev-parse --short $GITHUB_SHA)" >> "$GITHUB_OUTPUT"
 
