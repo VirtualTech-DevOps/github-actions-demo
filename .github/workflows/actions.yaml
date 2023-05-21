@@ -1,0 +1,18 @@
+name: workflow name
+
+run-name: workflow run name
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/actions.yaml
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo hello
+      - run: echo world
