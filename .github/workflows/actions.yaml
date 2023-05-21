@@ -1,6 +1,6 @@
-name: workflow name
+name: hello world
 
-run-name: workflow run name
+run-name: say hello world
 
 on:
   push:
@@ -13,6 +13,7 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
+      - run: sleep 1
       - name: say hello
         run: echo hello
   say-world:
