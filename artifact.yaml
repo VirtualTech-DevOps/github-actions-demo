@@ -1,0 +1,14 @@
+name: demo workflow
+
+run-name: upload artifact
+
+jobs:
+  upload-artifact:
+    run-os: ubuntu-latest
+    steps:
+      - run: mkdir artifact
+      - run: echo hello > artifact/hello.txt
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: artifact/hello.txt
