@@ -2,6 +2,8 @@ name: demo workflow
 
 run-name: upload artifact
 
+on: push
+
 jobs:
   upload-artifact:
     run-os: ubuntu-latest
