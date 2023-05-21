@@ -1,11 +1,11 @@
-name: demo workflow
+name: artifact
 
-run-name: upload artifact
+run-name: Upload artifact
 
 on: push
 
 jobs:
-  upload-artifact:
+  create-and-upload:
     runs-on: ubuntu-latest
     steps:
       - run: mkdir artifact
