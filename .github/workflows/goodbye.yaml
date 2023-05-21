@@ -3,6 +3,7 @@ name: goodbye
 run-name: say goodbye
 
 on:
+  # ワークフローから呼び出されたときに実行する
   workflow_call
 
 jobs:
