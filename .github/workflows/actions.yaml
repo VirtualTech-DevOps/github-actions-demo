@@ -12,12 +12,14 @@ on:
 jobs:
   say-hello:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - run: sleep 3
       - name: say hello
         run: echo hello
   say-world:
     runs-on: ubuntu-latest
-    #needs: say-hello
+    needs: say-hello
     steps:
       - run: echo world
