@@ -1,6 +1,6 @@
 name: artifact
 
-run-name: Upload artifact
+run-name: upload artifact
 
 on: push
 

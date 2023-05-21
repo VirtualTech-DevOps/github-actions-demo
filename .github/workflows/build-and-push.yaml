@@ -1,6 +1,6 @@
 name: build and push
 
-run-name: Build and push app container
+run-name: build and push app container
 
 on:
   push:
