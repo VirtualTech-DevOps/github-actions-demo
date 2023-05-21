@@ -13,7 +13,7 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 1
+      - run: sleep 3
       - name: say hello
         run: echo hello
   say-world:
