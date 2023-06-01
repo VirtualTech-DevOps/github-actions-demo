@@ -18,6 +18,12 @@ tag=$(gh api \
 kubectl create deployment app --image ghcr.io/virtualtech-devops/github-actions-demo:$tag -r 1 --dry-run=client -o yaml > manifest/app.yaml
 ```
 
+```
+git add manifest/app.yaml
+git commit -m 'update manifest' manifest/app.yaml
+git push origin main
+```
+
 ## マニフェストの生合成チェック
 
 ### デプロイできるか
