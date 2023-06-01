@@ -11,7 +11,7 @@ terraform apply
 ```
 
 ```
-terraform output -raw role
+terraform output -raw role | gh secret set assume_role
 ```
 
 ## マニフェストの更新
