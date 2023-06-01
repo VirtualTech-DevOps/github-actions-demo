@@ -5,13 +5,15 @@ on:
     branches:
       - main
     paths:
-      - manifest/app.yaml
+      - 'manifest/**.yaml'
+      - .github/workflows/deploy.yaml
+      - .github/workflows/deploy-to-eks.yaml
 
 jobs:
   deploy-to-eks:
     uses: ./.github/workflows/deploy-to-eks.yaml
     with:
-      assume_role: ${{ secrets.assume_role }}
+      assume_role: ${{ vars.assume_role }}
       eks_region: ap-northeast-1
       eks_cluster_name: poc
       manifest: manifest/app.yaml
