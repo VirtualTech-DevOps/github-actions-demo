@@ -6,7 +6,7 @@ on:
       assume_role:
         required: true
         type: string
-      eks_region:
+      aws_region:
         required: true
         type: string
       eks_cluster_name:
@@ -19,8 +19,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      AWS_REGION: ${{ inputs.eks_region }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,7 +28,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ inputs.assume_role }}
-          aws-region: ${AWS_REGION}
+          aws-region: ${{ inputs.aws_region }}
       - name: Update KUBECONFIG
         run: aws eks update-kubeconfig --name ${{ inputs.eks_cluster_name }}
       - name: Deploy to EKS
