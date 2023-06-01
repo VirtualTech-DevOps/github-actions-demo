@@ -1,5 +1,19 @@
 # github-actions-demo
 
+##
+
+`path/to/repo/terraform/aws`
+
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+```
+terraform output -raw role
+```
+
 ## マニフェストの更新
 
 `org`と`pkgname`は環境に合わせる
