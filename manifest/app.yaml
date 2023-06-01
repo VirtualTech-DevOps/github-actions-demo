@@ -21,4 +21,3 @@ spec:
       - image: ghcr.io/virtualtech-devops/github-actions-demo:e73d3c2
         name: github-actions-demo
         resources: {}
-status: {}
