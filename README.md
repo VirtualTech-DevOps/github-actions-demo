@@ -24,7 +24,7 @@ git commit -m 'update manifest' manifest/app.yaml
 git push origin main
 ```
 
-## マニフェストの生合成チェック
+## マニフェストのチェック
 
 ### デプロイできるか
 
